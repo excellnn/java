@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>register form</title>
+</head>
+<body>
+<form action="" method="post" th:object="${spitter}">
+    <div th:if="${#fields.hasErrors('*')}">
+        <ul>
+            <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Input is incorrect</li>
+        </ul>
+    </div>
+    <div>
+        <label th:class="${#fields.hasErrors('username')} ? 'error'">username</label>
+        <input th:field="*{username}" th:class="${#fields.hasErrors('username')} ? 'error'" type="text" placeholder="username"  name="username"/>
+    </div>
+    <div>
+        <label th:class="${#fields.hasErrors('password')} ? 'error'">password</label>
+        <input th:field="*{password}" th:class="${#fields.hasErrors('password')} ? 'error'" type="password" placeholder="password" name="password" />
+    </div>
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

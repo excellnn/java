@@ -12,7 +12,7 @@
     <tbody>
     <tr th:each="spittle : ${spittleList}">
         <td th:text="${spittle.id}">1</td>
-        <td><a href="#" th:text="${spittle.message}">message ...</a></td>
+        <td><a href="/spittles/show/" th:attrappend="href=${spittle.id}" th:text="${spittle.message}">message ...</a></td>
         <td th:text="${spittle.time}">time ...</td>
     </tr>
     </tbody>

@@ -1,4 +1,4 @@
-package com.example.demo.spittr;
+package com.example.demo.spittr.data;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
