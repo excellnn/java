@@ -8,12 +8,5 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 public class HomeControllerTest {
-    @Test
-    public void testHomePage() throws Exception{
-        HomeController homeController = new HomeController();
-        MockMvc mockMvc = standaloneSetup(homeController).build();
 
-        mockMvc.perform(get("/"))
-                .andExpect(view().name("home"));
-    }
 }

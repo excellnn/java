@@ -8,16 +8,13 @@ import java.util.List;
 @Component
 public class SpitterRepository {
     private List<Spitter> list = new ArrayList<>();
+
     public void save(Spitter spitter) {
         list.add(spitter);
     }
 
     public Spitter findOne(String spitterName) {
         Spitter spitter = null;
-
-        Boolean bl = list.get(0).getUsername().equals(spitterName);
-
-        System.out.println(bl);
 
         try {
             for (int i = 0; i < list.size(); i++) {
